@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-weight: 300;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  background-color: ghostwhite;
+}
+
+.main-layout {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.main-layout__content {
+  width: 100%;
+  max-width: 90rem;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+}
+
+.not-found {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.2rem;
+}
+
+.blog-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 4rem 0px;
+  transition: all 0.1s;
+}
+
+.blog-wrapper span {
+  width: 30%;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0.4rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  transition: all 0.1s;
+}
+
+.blog-wrapper span:hover {
+  transform: scale(1.02);
+  outline: 1px solid #000;
+}
+
+.blog-wrapper:hover span:not(:hover) {
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+
+.blog-wrapper span h2 {
+  font-weight: 700;
+}
+
+.blog-wrapper span a:link,
+.blog-wrapper span a:visited {
+  margin-top: 1rem;
+  text-align: center;
+  width: 9rem;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border-bottom: 0.1rem solid black;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.blog-wrapper span a:hover {
+  color: white;
+  background-color: black;
+  transform: translateY(-2px);
+}
+
+.blog-wrapper span a:active {
+  transform: translateY(-1px);
+}
+
+.loading {
+  width: 5rem;
+  height: 5rem;
+  margin: 2rem;
+  border-radius: 50%;
+  border: 0.3rem solid rgba(0, 0, 0, 0.297);
+  border-top-color: black;
+  animation: 1.5s spin infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-content {
+  margin-right: auto;
+}
+
+.blog-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.blog-content p {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.back:link,
+.back:visited {
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: orange;
+  border-bottom: 0.1rem solid orange;
+  padding: 0.5rem;
+  transition: all 0.2s;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.back:hover {
+  color: white;
+  background-color: orange;
+  transform: translateY(-2px);
+}
+
+.back:active {
+  transform: translateY(-1px);
+}
